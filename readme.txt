@@ -1,0 +1,1 @@
+DualWeb -- A do it yourself web browser with two webviews. Nothing fancy.
