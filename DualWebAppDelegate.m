@@ -16,6 +16,7 @@
 @synthesize _textFieldLeft;
 @synthesize _webViewRight;
 @synthesize _textFieldRight;
+@synthesize _verticalSeparator;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
@@ -59,11 +60,27 @@
     //unsigned screenCount = [screenArray count];
     //unsigned index  = 0;
 	
-	NSRect  usableScreenRect = [[NSScreen mainScreen] visibleFrame];
+	NSRect rectLeft = [_textFieldLeft frame];
 	
-	NSLog(@"Width %@",NSStringFromRect(usableScreenRect));
+	NSRect usableScreenRect = [[NSScreen mainScreen] visibleFrame];
+	NSRect vRect = NSMakeRect(usableScreenRect.size.width/2.0, 0.0, 
+							  1.0, usableScreenRect.size.height);
+	
+	NSRect webRightRect =  NSMakeRect(usableScreenRect.size.width/2.0+5.0, 20.0,
+									   usableScreenRect.size.width/2.0-10.0, 
+									   usableScreenRect.size.height-100.0);
+	
+	NSRect webLeftRect =  NSMakeRect(5.0, 20.0,
+									   usableScreenRect.size.width/2.0-10.0, 
+									   usableScreenRect.size.height-100.0);
+	
+	
+	NSLog(@"Width %@",NSStringFromRect(rectLeft));
 
-	[window setFrame:usableScreenRect display:YES animate:YES];
+	[window setFrame:usableScreenRect display:YES animate:NO];
+	[_verticalSeparator setFrame:vRect];
+	[_webViewRight setFrame:webRightRect];
+	[_webViewLeft setFrame:webLeftRect];
 	
 
 }

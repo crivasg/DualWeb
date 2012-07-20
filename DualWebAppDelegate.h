@@ -18,6 +18,8 @@
 	NSTextField *_textFieldRight;
 	WebView *_webViewRight;
 	
+	NSBox *_verticalSeparator;
+	
 }
 
 - (IBAction)goLeft: (id)sender;
@@ -30,5 +32,7 @@
 @property (assign) IBOutlet NSTextField *_textFieldLeft;
 @property (assign) IBOutlet WebView *_webViewRight;
 @property (assign) IBOutlet NSTextField *_textFieldRight;
+
+@property (assign) IBOutlet NSBox *_verticalSeparator;
 
 @end
