@@ -18,6 +18,8 @@
 @synthesize _textFieldRight;
 @synthesize _verticalSeparator;
 
+static CGFloat statusHeigth = 20.0;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
 	
@@ -65,24 +67,32 @@
 	NSRect usableScreenRect = [[NSScreen mainScreen] visibleFrame];
 	NSRect vRect = NSMakeRect(usableScreenRect.size.width/2.0, 0.0, 
 							  1.0, usableScreenRect.size.height);
-	
-	NSRect webRightRect =  NSMakeRect(usableScreenRect.size.width/2.0+5.0, 20.0,
-									   usableScreenRect.size.width/2.0-10.0, 
-									   usableScreenRect.size.height-100.0);
-	
-	NSRect webLeftRect =  NSMakeRect(5.0, 20.0,
-									   usableScreenRect.size.width/2.0-10.0, 
-									   usableScreenRect.size.height-100.0);
-	
-	
-	NSLog(@"Width %@",NSStringFromRect(rectLeft));
 
+	
 	[window setFrame:usableScreenRect display:YES animate:NO];
 	[_verticalSeparator setFrame:vRect];
+
+
+	CGFloat toolbarHeight = 0.0;
+	NSRect windowFrame;
+	
+	windowFrame = [NSWindow contentRectForFrameRect:[window frame]
+										  styleMask:[window styleMask]];
+	
+	toolbarHeight = NSHeight(windowFrame) - NSHeight([[window contentView] frame]);
+	NSLog(@"Width %@ %.3f",NSStringFromRect(windowFrame), toolbarHeight);
+	
+	
+	NSRect webRightRect =  NSMakeRect(usableScreenRect.size.width/2.0,statusHeigth,
+									  usableScreenRect.size.width/2.0, 
+									  windowFrame.size.height - statusHeigth);
+	
+	NSRect webLeftRect =  NSMakeRect(0.0,statusHeigth,
+									 usableScreenRect.size.width/2.0, 
+									 windowFrame.size.height - statusHeigth);
+	
 	[_webViewRight setFrame:webRightRect];
 	[_webViewLeft setFrame:webLeftRect];
-	
-
 }
 
 @end
