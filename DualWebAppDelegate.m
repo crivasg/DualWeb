@@ -28,7 +28,7 @@ static CGFloat statusHeigth = 20.0;
 }
 
 - (void)awakeFromNib {
-	[ _textFieldLeft setStringValue:@"http://google.com" ];
+	[ _textFieldLeft setStringValue:@"http://duckduckgo.com" ];
 	[ _textFieldRight setStringValue:@"http://news.ycombinator.com/news" ];
 	
 	[ self goLeft:NULL];
