@@ -57,13 +57,6 @@ static CGFloat statusHeigth = 20.0;
 
 - (void) resizeWindow {
 	
-    //NSArray *screenArray = [NSScreen screens];
-    //NSScreen *mainScreen = [NSScreen mainScreen];
-    //unsigned screenCount = [screenArray count];
-    //unsigned index  = 0;
-	
-	NSRect rectLeft = [_textFieldLeft frame];
-	
 	NSRect usableScreenRect = [[NSScreen mainScreen] visibleFrame];
 	NSRect vRect = NSMakeRect(usableScreenRect.size.width/2.0, 0.0, 
 							  1.0, usableScreenRect.size.height);
