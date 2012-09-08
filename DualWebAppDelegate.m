@@ -16,7 +16,6 @@
 @synthesize _textFieldLeft;
 @synthesize _webViewRight;
 @synthesize _textFieldRight;
-@synthesize _verticalSeparator;
 
 static CGFloat statusHeigth = 20.0;
 
@@ -58,12 +57,12 @@ static CGFloat statusHeigth = 20.0;
 - (void) resizeWindow {
 	
 	NSRect usableScreenRect = [[NSScreen mainScreen] visibleFrame];
-	NSRect vRect = NSMakeRect(usableScreenRect.size.width/2.0, 0.0, 
+	/*NSRect vRect = NSMakeRect(usableScreenRect.size.width/2.0, 0.0, 
 							  1.0, usableScreenRect.size.height);
-
+	 */
 	
 	[window setFrame:usableScreenRect display:YES animate:NO];
-	[_verticalSeparator setFrame:vRect];
+
 
 
 	CGFloat toolbarHeight = 0.0;
@@ -87,5 +86,6 @@ static CGFloat statusHeigth = 20.0;
 	[_webViewRight setFrame:webRightRect];
 	[_webViewLeft setFrame:webLeftRect];
 }
+
 
 @end

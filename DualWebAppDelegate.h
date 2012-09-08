@@ -18,7 +18,6 @@
 	NSTextField *_textFieldRight;
 	WebView *_webViewRight;
 	
-	NSBox *_verticalSeparator;
 	
 }
 
@@ -33,6 +32,5 @@
 @property (assign) IBOutlet WebView *_webViewRight;
 @property (assign) IBOutlet NSTextField *_textFieldRight;
 
-@property (assign) IBOutlet NSBox *_verticalSeparator;
 
 @end
