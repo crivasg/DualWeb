@@ -73,6 +73,7 @@ static CGFloat statusHeigth = 20.0;
 	
 	toolbarHeight = NSHeight(windowFrame) - NSHeight([[window contentView] frame]);
 	NSLog(@"Width %@ %.3f",NSStringFromRect(windowFrame), toolbarHeight);
+
 	
 	
 	NSRect webRightRect =  NSMakeRect(usableScreenRect.size.width/2.0,statusHeigth,
@@ -83,7 +84,7 @@ static CGFloat statusHeigth = 20.0;
 									 usableScreenRect.size.width/2.0, 
 									 windowFrame.size.height - statusHeigth);
 	
-	[_webViewRight setFrame:webRightRect];
+	[_webViewRight setFrame:webLeftRect];
 	[_webViewLeft setFrame:webLeftRect];
 	 
 }

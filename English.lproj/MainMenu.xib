@@ -981,18 +981,18 @@
 								<int key="NSPeriodicInterval">75</int>
 							</object>
 						</object>
-						<object class="NSSplitView" id="930366146">
+						<object class="NSSplitView" id="6418390">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">274</int>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSCustomView" id="394690156">
-									<reference key="NSNextResponder" ref="930366146"/>
+								<object class="NSCustomView" id="739805200">
+									<reference key="NSNextResponder" ref="6418390"/>
 									<int key="NSvFlags">256</int>
 									<object class="NSMutableArray" key="NSSubviews">
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<object class="WebView" id="792520850">
-											<reference key="NSNextResponder" ref="394690156"/>
+											<reference key="NSNextResponder" ref="739805200"/>
 											<int key="NSvFlags">274</int>
 											<object class="NSMutableSet" key="NSDragTypes">
 												<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1015,8 +1015,8 @@
 													<string>public.url-name</string>
 												</object>
 											</object>
-											<string key="NSFrame">{{-154, -329}, {624, 983}}</string>
-											<reference key="NSSuperview" ref="394690156"/>
+											<string key="NSFrame">{{-154, -329}, {603, 983}}</string>
+											<reference key="NSSuperview" ref="739805200"/>
 											<reference key="NSNextKeyView"/>
 											<bool key="NSViewIsLayerTreeHost">YES</bool>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -1046,18 +1046,18 @@
 											<bool key="AllowsUndo">YES</bool>
 										</object>
 									</object>
-									<string key="NSFrameSize">{458, 654}</string>
-									<reference key="NSSuperview" ref="930366146"/>
+									<string key="NSFrameSize">{437, 654}</string>
+									<reference key="NSSuperview" ref="6418390"/>
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<string key="NSClassName">NSView</string>
 								</object>
-								<object class="NSCustomView" id="100725263">
-									<reference key="NSNextResponder" ref="930366146"/>
+								<object class="NSCustomView" id="61512527">
+									<reference key="NSNextResponder" ref="6418390"/>
 									<int key="NSvFlags">256</int>
 									<object class="NSMutableArray" key="NSSubviews">
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<object class="WebView" id="873014626">
-											<reference key="NSNextResponder" ref="100725263"/>
+											<reference key="NSNextResponder" ref="61512527"/>
 											<int key="NSvFlags">274</int>
 											<object class="NSMutableSet" key="NSDragTypes">
 												<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1080,8 +1080,8 @@
 													<string>public.url-name</string>
 												</object>
 											</object>
-											<string key="NSFrame">{{-52, -321}, {469, 1003}}</string>
-											<reference key="NSSuperview" ref="100725263"/>
+											<string key="NSFrame">{{-52, -321}, {481, 1003}}</string>
+											<reference key="NSSuperview" ref="61512527"/>
 											<reference key="NSNextKeyView"/>
 											<bool key="NSViewIsLayerTreeHost">YES</bool>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
@@ -1092,8 +1092,8 @@
 											<bool key="AllowsUndo">YES</bool>
 										</object>
 									</object>
-									<string key="NSFrame">{{459, 0}, {409, 654}}</string>
-									<reference key="NSSuperview" ref="930366146"/>
+									<string key="NSFrame">{{447, 0}, {421, 654}}</string>
+									<reference key="NSSuperview" ref="6418390"/>
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 									<string key="NSClassName">NSView</string>
 								</object>
@@ -1102,7 +1102,7 @@
 							<reference key="NSSuperview" ref="439893737"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSIsVertical">YES</bool>
-							<int key="NSDividerStyle">2</int>
+							<int key="NSDividerStyle">3</int>
 						</object>
 					</object>
 					<string key="NSFrameSize">{868, 654}</string>
@@ -1586,6 +1586,14 @@
 						<reference key="destination" ref="439893737"/>
 					</object>
 					<int key="connectionID">571</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">_splitview</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="6418390"/>
+					</object>
+					<int key="connectionID">575</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2148,7 +2156,7 @@
 							<reference ref="511637915"/>
 							<reference ref="944210541"/>
 							<reference ref="685781789"/>
-							<reference ref="930366146"/>
+							<reference ref="6418390"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2336,41 +2344,41 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">572</int>
-						<reference key="object" ref="930366146"/>
+						<reference key="object" ref="6418390"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="394690156"/>
-							<reference ref="100725263"/>
+							<reference ref="739805200"/>
+							<reference ref="61512527"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">573</int>
-						<reference key="object" ref="394690156"/>
+						<reference key="object" ref="739805200"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="792520850"/>
 						</object>
-						<reference key="parent" ref="930366146"/>
+						<reference key="parent" ref="6418390"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">574</int>
-						<reference key="object" ref="100725263"/>
+						<reference key="object" ref="61512527"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="873014626"/>
 						</object>
-						<reference key="parent" ref="930366146"/>
+						<reference key="parent" ref="6418390"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">533</int>
 						<reference key="object" ref="792520850"/>
-						<reference key="parent" ref="394690156"/>
+						<reference key="parent" ref="739805200"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">552</int>
 						<reference key="object" ref="873014626"/>
-						<reference key="parent" ref="100725263"/>
+						<reference key="parent" ref="61512527"/>
 					</object>
 				</object>
 			</object>
@@ -2734,10 +2742,10 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{331, 230}, {868, 654}}</string>
+					<string>{{301, 313}, {868, 654}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{331, 230}, {868, 654}}</string>
+					<string>{{301, 313}, {868, 654}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
@@ -2857,7 +2865,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">574</int>
+			<int key="maxID">575</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2901,6 +2909,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>_splitview</string>
 							<string>_textFieldLeft</string>
 							<string>_textFieldRight</string>
 							<string>_webViewLeft</string>
@@ -2909,6 +2918,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSSplitView</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>WebView</string>
@@ -2920,6 +2930,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>_splitview</string>
 							<string>_textFieldLeft</string>
 							<string>_textFieldRight</string>
 							<string>_webViewLeft</string>
@@ -2928,6 +2939,10 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_splitview</string>
+								<string key="candidateClassName">NSSplitView</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">_textFieldLeft</string>
 								<string key="candidateClassName">NSTextField</string>

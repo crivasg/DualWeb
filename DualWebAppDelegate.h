@@ -18,6 +18,8 @@
 	NSTextField *_textFieldRight;
 	WebView *_webViewRight;
 	
+	NSSplitView *_splitview;
+	
 	
 }
 
@@ -31,6 +33,7 @@
 @property (assign) IBOutlet NSTextField *_textFieldLeft;
 @property (assign) IBOutlet WebView *_webViewRight;
 @property (assign) IBOutlet NSTextField *_textFieldRight;
+@property (assign) IBOutlet NSSplitView *_splitview;
 
 
 @end
