@@ -85,6 +85,7 @@ static CGFloat statusHeigth = 20.0;
 	
 	[_webViewRight setFrame:webRightRect];
 	[_webViewLeft setFrame:webLeftRect];
+	 
 }
 
 
