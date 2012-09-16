@@ -28,6 +28,8 @@ static CGFloat statusHeigth = 20.0;
 }
 
 - (void)awakeFromNib {
+	
+	[self centerViews:NULL];
 	[ _textFieldLeft setStringValue:@"http://duckduckgo.com" ];
 	[ _textFieldRight setStringValue:@"http://news.ycombinator.com/news" ];
 	
@@ -53,28 +55,15 @@ static CGFloat statusHeigth = 20.0;
 - (IBAction)centerViews: (id)sender
 {
 
-	//CGFloat x = [ _splitview frame].origin.x;
-	//CGFloat y = [ _splitview frame].origin.y;
 	CGFloat h = [ _splitview frame].size.height;
 	CGFloat w = [ _splitview frame].size.width;
 	CGFloat divider = [_splitview dividerThickness];
 	
-	//NSArray *subviews = [_splitview subviews];
-	//CGFloat w1 =[ self getSizeOfSplitSubview:0 splitView:_splitview ];
-	//CGFloat w2 =[ self getSizeOfSplitSubview:1 splitView:_splitview ];
-	
 	CGFloat desiredWidth = ( w - divider ) / 2.0;
-	
-	//NSLog(@"X:%f Y:%f H:%f W:%f d:%f w1:%f w2:%f %f", x,y,h,w, divider,w1,w2,desiredWidth);
 	
 	NSRect dividerRect1 = NSMakeRect(0.0,0.0, desiredWidth, h);
 	NSRect dividerRect2 = NSMakeRect(desiredWidth+ divider,0.0, desiredWidth, h);
-	//NSLog(@"dividerRect1 --> %@",NSStringFromRect(dividerRect1));
-	//NSLog(@"dividerRect2 --> %@",NSStringFromRect(dividerRect2));
-	
-//	[_splitview drawDividerInRect:dividerRect];
-//	[_splitview adjustSubviews];
-//	
+
 	NSArray *subviews = [_splitview subviews];
 	NSView *subview = [subviews objectAtIndex:0];
 	NSView *subview2 = [subviews objectAtIndex:1];
@@ -84,15 +73,13 @@ static CGFloat statusHeigth = 20.0;
 	
 	NSArray *newArray = [NSArray arrayWithObjects:subview, subview2, nil];
 	[_splitview setSubviews:newArray];
-	
-	// adjust the subviews...
 	[_splitview adjustSubviews];
 	
-	//
-	CGFloat w1 =[ self getSizeOfSplitSubview:0 splitView:_splitview ];
-	CGFloat w2 =[ self getSizeOfSplitSubview:1 splitView:_splitview ];	
-	
-	NSLog(@"X:%f Y:%f", w1,w2 );
+//	//
+//	CGFloat w1 =[ self getSizeOfSplitSubview:0 splitView:_splitview ];
+//	CGFloat w2 =[ self getSizeOfSplitSubview:1 splitView:_splitview ];	
+//	
+//	NSLog(@"X:%f Y:%f", w1,w2 );
 	
 }
 
