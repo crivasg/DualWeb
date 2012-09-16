@@ -50,6 +50,12 @@ static CGFloat statusHeigth = 20.0;
 											  [NSURL URLWithString:address]]];
 }
 
+- (IBAction)centerViews: (id)sender
+{
+
+	NSLog(@"Center Views.....");
+}
+
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
 {
 	return YES;
@@ -79,7 +85,7 @@ static CGFloat statusHeigth = 20.0;
 										  styleMask:[window styleMask]];
 	
 	toolbarHeight = NSHeight(windowFrame) - NSHeight([[window contentView] frame]);
-	NSLog(@"Width %@ %.3f",NSStringFromRect(windowFrame), toolbarHeight);
+	//NSLog(@"Width %@ %.3f",NSStringFromRect(windowFrame), toolbarHeight);
 
 	
 	
