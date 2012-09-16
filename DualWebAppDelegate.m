@@ -16,6 +16,7 @@
 @synthesize _textFieldLeft;
 @synthesize _webViewRight;
 @synthesize _textFieldRight;
+@synthesize _splitview;
 
 static CGFloat statusHeigth = 20.0;
 
@@ -63,10 +64,16 @@ static CGFloat statusHeigth = 20.0;
 	
 	[window setFrame:usableScreenRect display:YES animate:NO];
 
+	[self spaceEvenly:_splitview];
+	// have the AppKit redraw the dividers
+	[_splitview adjustSubviews];
 
 
 	CGFloat toolbarHeight = 0.0;
 	NSRect windowFrame;
+	
+	float leftSubviewWidth = [self getSizeOfSplitSubview:0 splitView:_splitview];
+	float rightSubviewWidth = [self getSizeOfSplitSubview:1 splitView:_splitview];
 	
 	windowFrame = [NSWindow contentRectForFrameRect:[window frame]
 										  styleMask:[window styleMask]];
@@ -76,17 +83,55 @@ static CGFloat statusHeigth = 20.0;
 
 	
 	
-	NSRect webRightRect =  NSMakeRect(usableScreenRect.size.width/2.0,statusHeigth,
-									  usableScreenRect.size.width/2.0, 
+	NSRect webRightRect =  NSMakeRect(0.0,statusHeigth,rightSubviewWidth, 
 									  windowFrame.size.height - statusHeigth);
 	
-	NSRect webLeftRect =  NSMakeRect(0.0,statusHeigth,
-									 usableScreenRect.size.width/2.0, 
+	NSRect webLeftRect =  NSMakeRect(0.0,statusHeigth,leftSubviewWidth, 
 									 windowFrame.size.height - statusHeigth);
 	
-	[_webViewRight setFrame:webLeftRect];
-	[_webViewLeft setFrame:webLeftRect];
+	[_webViewRight setFrame:webRightRect];
+	[_webViewLeft  setFrame:webLeftRect];
 	 
+}
+
+- (void)spaceEvenly:(NSSplitView *)splitView
+{
+	// get the subviews of the split view
+	NSArray *subviews = [splitView subviews];
+	unsigned int n = [subviews count];
+	
+	// compute the new height of each subview
+	float divider = [splitView dividerThickness];
+	float height = ([splitView bounds].size.height - (n - 1) * divider) / n; 
+	
+	// adjust the frames of all subviews
+	float y = 0;
+	NSView *subview;
+	NSEnumerator *e = [subviews objectEnumerator];
+	while ((subview = [e nextObject]) != nil)
+	{
+		NSRect frame = [subview frame];
+		frame.origin.y = rintf(y);
+		frame.size.height = rintf(y + height) - frame.origin.y;
+		[subview setFrame:frame];
+		y += height + divider;
+	}
+	
+}
+
+- (float)getSizeOfSplitSubview:(int)index splitView:(NSSplitView *)splitView
+{
+	NSArray *subviews = [splitView subviews];
+	float w = -1.0;
+	
+	NSView *subview = [subviews objectAtIndex:index];
+	NSRect frame = [subview frame];
+	
+	w = frame.size.width;
+	
+	return w;
+	
+	
 }
 
 

@@ -26,7 +26,9 @@
 - (IBAction)goLeft: (id)sender;
 - (IBAction)goRight: (id)sender; 
 
-- (void) resizeWindow;
+- (void)resizeWindow;
+- (void)spaceEvenly:(NSSplitView *)splitView;
+- (float)getSizeOfSplitSubview:(int)index splitView:(NSSplitView *)splitView;
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet WebView *_webViewLeft;
