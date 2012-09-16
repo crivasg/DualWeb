@@ -53,7 +53,20 @@ static CGFloat statusHeigth = 20.0;
 - (IBAction)centerViews: (id)sender
 {
 
-	NSLog(@"Center Views.....");
+	CGFloat x = [ _splitview frame].origin.x;
+	CGFloat y = [ _splitview frame].origin.y;
+	CGFloat h = [ _splitview frame].size.height;
+	CGFloat w = [ _splitview frame].size.width;
+	CGFloat divider = [_splitview dividerThickness];
+	
+	//NSArray *subviews = [_splitview subviews];
+	CGFloat w1 =[ self getSizeOfSplitSubview:0 splitView:_splitview ];
+	CGFloat w2 =[ self getSizeOfSplitSubview:1 splitView:_splitview ];
+	
+	CGFloat desiredWidth = ( w - divider ) / 2.0;
+	
+	NSLog(@"X:%f Y:%f H:%f W:%f d:%f w1:%f w2:%f", x,y,h,w, divider,w1,w2);
+	
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender

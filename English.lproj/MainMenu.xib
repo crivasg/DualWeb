@@ -740,7 +740,7 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
-								<object class="NSMenuItem" id="269351702">
+								<object class="NSMenuItem" id="275279757">
 									<reference key="NSMenu" ref="328032705"/>
 									<string key="NSTitle">Center Views</string>
 									<string key="NSKeyEquiv"/>
@@ -1597,7 +1597,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">centerViews:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="269351702"/>
+						<reference key="destination" ref="275279757"/>
 					</object>
 					<int key="connectionID">577</int>
 				</object>
@@ -2284,7 +2284,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="410661285"/>
-							<reference ref="269351702"/>
+							<reference ref="275279757"/>
 						</object>
 						<reference key="parent" ref="898060533"/>
 					</object>
@@ -2389,7 +2389,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">576</int>
-						<reference key="object" ref="269351702"/>
+						<reference key="object" ref="275279757"/>
 						<reference key="parent" ref="328032705"/>
 					</object>
 				</object>
@@ -2755,10 +2755,10 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{329, 313}, {868, 654}}</string>
+					<string>{{442, 54}, {868, 654}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{329, 313}, {868, 654}}</string>
+					<string>{{442, 54}, {868, 654}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
