@@ -18,7 +18,7 @@
 @synthesize _textFieldRight;
 @synthesize _splitview;
 
-static CGFloat statusHeigth = 20.0;
+static CGFloat statusHeigth = 0.0;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
@@ -160,7 +160,7 @@ static CGFloat statusHeigth = 20.0;
 	NSView *subview = [subviews objectAtIndex:index];
 	NSRect frame = [subview frame];
 	
-	NSLog(@"|--> %@", NSStringFromRect(frame));
+	//NSLog(@"|--> %@", NSStringFromRect(frame));
 	
 	w = frame.size.width;
 	
