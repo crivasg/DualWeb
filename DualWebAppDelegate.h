@@ -26,6 +26,7 @@
 - (IBAction)goLeft: (id)sender;
 - (IBAction)goRight: (id)sender; 
 - (IBAction)centerViews: (id)sender;
+- (IBAction)reload: (id)sender;
 
 - (void)resizeWindow;
 - (void)spaceEvenly:(NSSplitView *)splitView;

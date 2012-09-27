@@ -83,6 +83,15 @@ static CGFloat statusHeigth = 0.0;
 	
 }
 
+- (IBAction)reload: (id)sender
+{
+	NSLog(@"Reload....");
+	
+	[_webViewLeft reload:nil];
+	[_webViewRight reload:nil];
+	
+}
+
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
 {
 	return YES;
